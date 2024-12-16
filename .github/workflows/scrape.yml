@@ -1,0 +1,21 @@
+name: Scrape Value
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version:   
+ '3.x'
+      - name: Install dependencies
+        run: pip install -r requirements.txt   
+
+      - name: Scrape value
+        run: python scraper.py
