@@ -17,7 +17,7 @@ def save_to_file(value, timestamp):
 
 # Replace with your target URL and XPath
 url = "http://www.boci-pru.com.hk/en/etf/wiseetf/02825"
-xpath = "//table[@id='cms_table_etf_nav_inner_table_mobile_1']"
+xpath = "table[@id='cms_table_etf_nav_inner_table_mobile_1']"
 
 value = scrape_value(url, xpath)
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
