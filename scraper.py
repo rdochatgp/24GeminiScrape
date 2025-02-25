@@ -28,7 +28,7 @@ def scrape_nav():
 
         # Find the intra-day NAV (this is hypothetical - adjust based on actual HTML)
         # Inspect the page source (right-click > Inspect) to find the exact tag/class
-        nav_element = soup.find("span", class_="intra-day-nav")  # Example class name
+        nav_element = soup.find("table", id_="cms_table_etf_nav_inner_table_mobile_1")  # Example class name
         if nav_element:
             nav_value = nav_element.text.strip()
         else:
