@@ -5,3 +5,4 @@ pandas
 flask
 parsel
 Selector
+selenium
